@@ -12,21 +12,6 @@ This repo is a collection of:
 - ✅ Debugging tips and configurations
 - ✅ Notes and references
 
-## 📁 Folder Structure
-
-ruby-on-rails-practice/
-│
-├── ruby_basics/ # Plain Ruby practice scripts
-│ └── practice01.rb
-│
-├── rails_projects/ # Mini Rails apps for practice
-│ └── blog_app/
-│
-├── notes/ # Markdown files with learning notes
-│ └── rails_commands.md
-│
-└── README.md # You are here!
-
 markdown
 Copy
 Edit
