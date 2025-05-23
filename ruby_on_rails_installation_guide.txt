@@ -1,0 +1,82 @@
+
+Ruby on Rails Installation Guide
+================================
+
+This guide will help you install Ruby, Rails, and set up your development environment.
+
+1. Install Ruby
+---------------
+🔗 Official site: https://www.ruby-lang.org/en/downloads/
+
+MacOS (with Homebrew):
+    brew install ruby
+
+Ubuntu / Debian:
+    sudo apt update
+    sudo apt install ruby-full
+
+Windows (use RubyInstaller):
+    https://rubyinstaller.org/
+
+Check version:
+    ruby -v
+
+2. Install Node.js and Yarn
+---------------------------
+Rails requires a JavaScript runtime.
+
+🔗 Node.js: https://nodejs.org/
+🔗 Yarn: https://classic.yarnpkg.com/en/docs/install
+
+Ubuntu:
+    sudo apt install nodejs
+    sudo apt install yarn
+
+MacOS:
+    brew install node
+    brew install yarn
+
+Windows:
+    Use the Node.js installer (includes npm), then:
+    npm install --global yarn
+
+3. Install Rails
+----------------
+Once Ruby is installed:
+
+    gem install rails
+
+Check version:
+    rails -v
+
+4. Install SQLite3 or PostgreSQL
+--------------------------------
+SQLite (default for small apps):
+    sudo apt install sqlite3 libsqlite3-dev
+
+PostgreSQL (for production apps):
+    🔗 https://www.postgresql.org/download/
+
+5. Create a New Rails App
+-------------------------
+    rails new myapp
+    cd myapp
+    rails server
+
+Then open your browser and go to:
+    http://localhost:3000
+
+6. Recommended Tools
+--------------------
+- Visual Studio Code: https://code.visualstudio.com/
+- Git: https://git-scm.com/
+- GitHub Desktop (optional): https://desktop.github.com/
+
+7. Resources to Learn
+---------------------
+- Ruby on Rails Guides: https://guides.rubyonrails.org/
+- The Odin Project: https://www.theodinproject.com/paths/full-stack-ruby-on-rails
+- GoRails (videos): https://gorails.com/
+- Rails Tutorial by Michael Hartl: https://www.railstutorial.org/
+
+Happy Coding! 🚀
