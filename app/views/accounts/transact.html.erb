@@ -1,0 +1,18 @@
+<h2>New Transaction for Account <%= @account.account_number %></h2>
+<div style="border: 10px solid rgb(18, 177, 13); width:20%; padding-left:15%; margin-left:500px;padding-right:5%;padding-top:2%; padding-bottom:5%; font-size:large;font-weight:bold;color:white;background-color:rgb(58, 58, 58)">
+<%= form_with model: @transaction, url: transactions_path do |f| %>
+  <%= f.hidden_field :account_id %>
+
+  <div  >
+    <%= f.label :transaction_type, style:"display: block; margin-bottom:10px" %>
+    <%= f.select :transaction_type, options_for_select(["credit", "debit"]), {}, class: "form-control", style:"margin-bottom:10px;font-size:large;font-weight:bold;background-color: rgb(219, 219, 192); color: black; padding:4px" %>
+  </div>
+
+  <div>
+    <%= f.label :amount, style:"display: block; margin-bottom:10px"  %>
+    <%= f.number_field :amount, step: 0.01, class: "form-control", style:"border:4px solid white;margin-bottom:20px;font-size:large;font-weight:bold;background-color: rgb(134, 134, 111); color: black; padding:4px" %>
+  </div>
+
+  <%= f.submit "Submit Transaction", class: "btn btn-success", style:"margin-bottom:10px;font-size:large;font-weight:bold;background-color: rgb(8, 156, 40); color: white; padding:4px; border:4px solid white" %>
+<% end %>
+</div>

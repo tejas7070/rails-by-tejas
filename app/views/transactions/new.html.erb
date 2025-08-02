@@ -1,0 +1,6 @@
+<%= form_with model: @transaction do |f| %>
+  <%= f.hidden_field :account_id %>
+  <%= f.select :transaction_type, options_for_select(["credit", "debit"]) %>
+  <%= f.number_field :amount %>
+  <%= f.submit "Submit" %>
+<% end %>
