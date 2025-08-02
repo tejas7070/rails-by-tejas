@@ -1,0 +1,52 @@
+<%= form_with(model: account) do |form| %>
+  <% if account.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(account.errors.count, "error") %> prohibited this account from being saved:</h2>
+
+      <ul>
+        <% account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :full_name, style: "display: block; margin-bottom:10px" %>
+    <%= form.text_field :full_name, style:"padding:10px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:80%",required: true %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block; margin-bottom:10px" %>
+    <%= form.textarea :address, style:"padding:3px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:81%",required: true %>
+  </div>
+
+  <div>
+    <%= form.label :phone, style: "display: block; margin-bottom:10px" %>
+    <%= form.text_field :phone, style:"padding:10px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:80%",required: true %>
+  </div>
+
+  <div>
+    <%= form.label :national_id, style: "display: block; margin-bottom:10px" %>
+    <%= form.text_field :national_id, style:"padding:10px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:80%",required: true %>
+  </div>
+
+  <div>
+    <%= form.label :account_number, style: "display: block; margin-bottom:10px" %>
+    <%= form.text_field :account_numbe, style:"padding:10px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:80%",reuired: true %>
+  </div>
+
+  <div>
+    <%= form.label :balance, style: "display: block; margin-bottom:10px" %>
+    <%= form.text_field :balance, style:"padding:10px; background-color:white; margin-bottom:20px; text-align:center; border: 3px solid rgb(8, 247, 235); width:80%" %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block; margin-bottom:10px"  %>
+    <%= form.select :status, [['Active', 'active'], ['Suspended', 'suspended']]  %>  
+  </div>
+
+  <div>
+    <%= form.submit "Submit", style:"padding:10px; background-color: rgb(83, 161, 94); margin-bottom:20px; margin-top:10px; text-align:center; border: 3px solid rgb(8, 247, 235); width:90%"%>
+  </div>
+<% end %>

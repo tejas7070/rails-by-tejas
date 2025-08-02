@@ -1,0 +1,20 @@
+
+<p style="color: black font-weight: bold "><%= notice %></p>
+<div style="border: 10px solid rgb(19, 241, 204); margin-left: 500px; margin-right: 500px; margin-top:100px ; padding-left: 20%; padding-bottom: 15px; background-color: rgb(99, 99, 99); border-radius: 15%; color: white; font-weight: bold ">
+<%=  render @account %>
+
+<div >
+  <%= link_to "Edit this account", edit_account_path(@account), style:"background-color: rgb(19, 105, 2); color: white; padding: 3px; border-radius:5%; border: 3px solid rgb(97, 219, 73) " %> |  |
+  <%= link_to "Back to accounts", accounts_path, style:"background-color: rgb(2, 76, 105); color: white; padding: 3px; border-radius:5%; border: 3px solid rgb(112, 147, 212) " %>
+  <br>
+  <br>
+  <br>
+  <%= button_to "Destroy this account", @account, method: :delete, style:" background-color: rgb(255, 16, 16); padding:3px; color: white; border: 3px solid rgb(255, 255, 255)" %>
+</div>
+<br>
+<br>
+<div>
+<%= link_to "History", history_account_path(@account), class: "btn btn-primary", style:"background-color: rgb(2, 76, 105); color: white; padding: 3px; border-radius:5%; border: 3px solid rgb(255, 255, 255) " %> |     |
+<%= link_to "Transact Now", transact_account_path(@account), class: "btn btn-success", style:"background-color: rgb(2, 76, 105); color: white; padding: 3px; border-radius:5%; border: 3px solid rgb(255, 255, 255) " %>
+</div>
+</div>

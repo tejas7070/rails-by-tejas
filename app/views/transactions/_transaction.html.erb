@@ -1,0 +1,21 @@
+<div id="<%= dom_id(transaction) %>" class="transaction-card" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;">
+  <p>
+    <strong>Transaction Type:</strong>
+    <%= transaction.transaction_type %>
+  </p>
+
+  <p>
+    <strong>Amount:</strong>
+    ₹<%= transaction.amount %>
+  </p>
+
+  <p>
+    <strong>Account Number:</strong>
+    <%= transaction.account.account_number if transaction.account.present? %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= transaction.created_at.strftime("%d %b %Y, %I:%M %p") %>
+  </p>
+</div>

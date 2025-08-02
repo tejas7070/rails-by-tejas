@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Accounts" %>
+
+<%= link_to "New account", new_account_path, style:"background-color: rgb(19, 105, 2); font-weight:bold; color: white; padding: 4px; border-radius:5%; border: 3px solid rgb(97, 219, 73) " %>
+<br>
+<br>
+<%= link_to "View All Transactions", history_all_transactions_path, class: "btn btn-info", style:"background-color: rgb(3, 49, 77); font-weight:bold; color: white; padding: 4px; border-radius:5%; border: 3px solid rgb(15, 145, 116) " %>
+
+<h1>Accounts</h1>
+
+<div id="accounts">
+  <% @accounts.each do |account| %>
+   <div style="border: 4px solid black;margin-left:400px;margin-right:400px;padding-left:25%; padding-bottom:5px; font-size:large; font-weight:bold">
+    <%= render account %>
+    </div>
+    <p>
+      <%= link_to "Show this account", account,style:"margin-left:20%; margin-bottom:10px; padding: 4px; background-color: rgb(0, 134, 34); color:white; border: 2px solid rgb(8, 37, 17)" %>
+    </p>
+  <% end %>
+</div>
+
+  
+
