@@ -57,7 +57,7 @@ group :development do
 end
 
 gem "devise", "~> 4.9"
-gem "rubocop", "~> 1.79"
+gem "rubocop", "~> 1.80"
 gem "faker", "~> 3.5"
 gem "rspec-rails", "~> 8.0"
 gem "pagy", "~> 9.3"
